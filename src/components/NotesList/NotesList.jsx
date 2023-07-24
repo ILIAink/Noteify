@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { GrFormClose } from "react-icons/gr";
-import { FaTrash } from "react-icons/Fa";
+import { FaTrash } from "react-icons/fa";
 import "./NotesList.css";
 
 const NotesList = ({
