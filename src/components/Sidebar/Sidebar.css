@@ -1,0 +1,32 @@
+.sidebar {
+  min-width: 200px;
+  max-width: 500px;
+  height: 100%;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  position: relative;
+  background: linear-gradient(180deg, var(--accent) 0%, var(--beige) 350%);
+  opacity: 0.8; /* Set the overall opacity of the sidebar */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to create depth */
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.gutter {
+  background-color: #598c5438;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: 50%;
+  cursor: col-resize;
+}
+
+.gutter.gutter-vertical {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=");
+}
+
+.gutter.gutter-horizontal {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
+}

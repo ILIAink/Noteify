@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+/* Potential Colors */
+/* https://huemint.com/website-3/#palette=fefefe-d4d4c2-1b1836-2a4672-f76142-fda32e */
+/* https://huemint.com/website-3/#palette=ffffff-718e3d-a83251-fef5f9-155e14-f0dd55 */
+/* https://huemint.com/website-magazine/#palette=f4f6fa-d8f0db-728633-565240 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: transparent;
+  outline: transparent;
+  /* border: solid 1.25px blue; */
+}
+
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 100%;
+  width: 100%;
+  height: 100%;
+} /*16px*/
+
+:root {
+  /* Colors */
+  --text: #0c130b;
+  --text-box: #0c130b13;
+  --background: #fcfdfc;
+  --primary-button: #4f7c4b;
+  --secondary-button: #f3f7f2;
+  --accent: #598c54;
+  --white: #fefefe;
+  --beige: #f3f2ed;
+
+  /* box shadow*/
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: rgb(245, 245, 245);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(234, 234, 234, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(234, 234, 234, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(234, 234, 234, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5f5f5",endColorstr="#eaeaea",GradientType=1);
+}
+
+/* Hide horizontal scrollbar */
+body {
+  overflow-x: hidden;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: start;
+}
+
+.btn {
+  width: calc(100% - 0.6rem);
+  height: 1.675rem;
+  border-radius: 3px;
+  padding: 0.24rem;
+  padding-left: 0.4rem;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.245px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: none;
+  border: transparent;
+  color: var(--background);
+}
+
+.btn:hover {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color ease 0.2s;
+}
+
+.btn-selected {
+  box-shadow: var(--shadow-1);
+  color: var(--text);
+  background-color: var(--background);
+}
+
+.btn-selected:hover {
+  box-shadow: var(--shadow-2);
+}
+
+.btn:active::after {
+  content: "";
+  transform: translateY(2px);
+  transition: all ease 0.2s;
+}
+
+.btn-add {
+  width: 35%;
+  max-width: 100px;
+  background-color: var(--text);
+  color: var(--background);
+  margin-top: 0.6rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  transition: all 1s ease;
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #718096;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #7180966e;
+}
